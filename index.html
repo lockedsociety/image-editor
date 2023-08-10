@@ -9,20 +9,36 @@
         <script src="./scripts/script.js" defer></script>
     </head>
     <body>
-        <section class="output">
-            <figure class="output__figure">
-                <canvas id="canvas"></canvas>
-            </figure>
-            <div class="output__actions">
-                <button class="output__button">Download</button>
-            </div>
-        </section>
-        <section class="input">
-            <div class="input__elem">
-                <label for="blur">Blur</label>
-                <input type="range" name="blur" />
-            </div>
-        </section>
+        <main class="main">
+            <section class="output">
+                <figure class="output__figure">
+                    <canvas id="canvas"></canvas>
+                </figure>
+                <div class="output__actions">
+                    <input type="file" name="file" id="file_field">
+                    <button class="output__button download">Download</button>
+                </div>
+            </section>
+
+            <section class="input">
+                <div class="input__elem">
+                    <label for="blur">Blur</label>
+                    <input id="blur" type="range" name="blur" min="0" max="100" step="1" value="0">
+                </div>
+                <div class="input__elem">
+                    <label for="brightness">Brightness</label>
+                    <input id="brightness" type="range" name="brightness" min="0" max="200" step="1" value="100">
+                </div>
+                <div class="input__elem">
+                    <label for="sepia">Sepia</label>
+                    <input id="sepia" type="range" name="sepia" min="0" max="100" step="1" value="0">
+                </div>
+                <div class="input__elem">
+                    <label for="saturate">Saturate</label>
+                    <input id="saturate" type="range" name="saturate" min="0" max="200" step="1" value="100">
+                </div>
+            </section>
+        </main>
         <footer class="footer">
             <p>&copy; 2023 Opensociety</p>
         </footer>
