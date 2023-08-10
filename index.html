@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Editor</title>
-    <link rel="stylesheet" href="./styles/style.css">
-    <script src="./scripts/script.js" defer></script>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Image Editor</title>
+        <link rel="stylesheet" href="./styles/style.css" />
+        <script src="./scripts/script.js" defer></script>
+    </head>
+    <body>
+        <section class="output">
+            <figure class="output__figure">
+                <canvas id="canvas"></canvas>
+            </figure>
+            <div class="output__actions">
+                <button class="output__button">Download</button>
+            </div>
+        </section>
+        <section class="input">
+            <div class="input__elem">
+                <label for="blur">Blur</label>
+                <input type="range" name="blur" />
+            </div>
+        </section>
+        <footer class="footer">
+            <p>&copy; 2023 Opensociety</p>
+        </footer>
+    </body>
 </html>
