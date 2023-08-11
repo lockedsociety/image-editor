@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="forest">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Image Editor</title>
-        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="./styles/output.css" />
         <script src="./scripts/script.js" defer></script>
     </head>
     <body>
@@ -15,32 +15,165 @@
                     <canvas id="canvas"></canvas>
                 </figure>
                 <div class="output__actions">
-                    <input type="file" name="file" id="file_field">
-                    <button class="output__button download">Download</button>
+                    <input
+                        type="file"
+                        name="file"
+                        id="file_field"
+                        class="file-input file-input-primary w-full max-w-xs" />
+                    <button
+                        class="output__button download btn btn-primary no-animation">
+                        Download
+                    </button>
                 </div>
             </section>
 
-            <section class="input">
-                <div class="input__elem">
-                    <label for="blur">Blur</label>
-                    <input id="blur" type="range" name="blur" min="0" max="100" step="1" value="0">
+            <section class="inputt">
+                <div class="settings">
+                    <div class="input__elem">
+                        <label for="blur">Blur</label>
+                        <input
+                            id="blur"
+                            class="range range-secondary"
+                            type="range"
+                            name="blur"
+                            min="0"
+                            max="30"
+                            step="1"
+                            data-unit="px"
+                            data-default="0"
+                            value="0" />
+                    </div>
+                    <div class="input__elem">
+                        <label for="brightness">Brightness</label>
+                        <input
+                            id="brightness"
+                            class="range range-secondary"
+                            type="range"
+                            name="brightness"
+                            min="0"
+                            max="500"
+                            step="10"
+                            data-unit="%"
+                            data-default="100"
+                            value="100" />
+                    </div>
+                    <div class="input__elem">
+                        <label for="sepia">Sepia</label>
+                        <input
+                            id="sepia"
+                            class="range range-secondary"
+                            type="range"
+                            name="sepia"
+                            min="0"
+                            max="100"
+                            data-unit="%"
+                            data-default="0"
+                            step="2"
+                            value="0" />
+                    </div>
+                    <div class="input__elem">
+                        <label for="saturate">Saturate</label>
+                        <input
+                            id="saturate"
+                            class="range range-secondary"
+                            type="range"
+                            name="saturate"
+                            min="0"
+                            max="500"
+                            data-unit="%"
+                            data-default="100"
+                            step="10"
+                            value="100" />
+                    </div>
+                    <div class="input__elem">
+                        <label for="saturate">Contrast</label>
+                        <input
+                            id="contrast"
+                            class="range range-secondary"
+                            type="range"
+                            name="contrast"
+                            min="0"
+                            max="500"
+                            data-unit="%"
+                            data-default="100"
+                            step="10"
+                            value="100" />
+                    </div>
+                    <div class="input__elem">
+                        <label for="saturate">Grayscale</label>
+                        <input
+                            id="grayscale"
+                            class="range range-secondary"
+                            type="range"
+                            name="grayscale"
+                            min="0"
+                            max="100"
+                            data-unit="%"
+                            data-default="0"
+                            step="2"
+                            value="0" />
+                    </div>
+                    <div class="input__elem">
+                        <label for="saturate">Hue-rotate</label>
+                        <input
+                            id="hue-rotate"
+                            class="range range-secondary"
+                            type="range"
+                            name="hue-rotate"
+                            min="0"
+                            max="360"
+                            data-unit="deg"
+                            data-default="0"
+                            step="7"
+                            value="0" />
+                    </div>
+                    <div class="input__elem">
+                        <label for="saturate">Invert</label>
+                        <input
+                            id="invert"
+                            class="range range-secondary"
+                            type="range"
+                            name="invert"
+                            min="0"
+                            max="100"
+                            data-unit="%"
+                            data-default="0"
+                            step="2"
+                            value="0" />
+                    </div>
+
+                    <div class="input__elem">
+                        <label for="saturate">Opacity</label>
+                        <input
+                            id="opacity"
+                            class="range range-secondary"
+                            type="range"
+                            name="opacity"
+                            min="0"
+                            max="100"
+                            data-unit="%"
+                            data-default="100"
+                            step="1"
+                            value="100" />
+                    </div>
                 </div>
-                <div class="input__elem">
-                    <label for="brightness">Brightness</label>
-                    <input id="brightness" type="range" name="brightness" min="0" max="200" step="1" value="100">
-                </div>
-                <div class="input__elem">
-                    <label for="sepia">Sepia</label>
-                    <input id="sepia" type="range" name="sepia" min="0" max="100" step="1" value="0">
-                </div>
-                <div class="input__elem">
-                    <label for="saturate">Saturate</label>
-                    <input id="saturate" type="range" name="saturate" min="0" max="200" step="1" value="100">
+                <div class="input_buttons">
+                    <button class="btn btn-primary" id="reset_filters">
+                        Reset
+                    </button>
                 </div>
             </section>
         </main>
-        <footer class="footer">
-            <p>&copy; 2023 Opensociety</p>
+        <footer class="footerr">
+            <p class="text-sm">
+                &copy; 2023
+                <a
+                    href="https://opensoc1ety.github.io"
+                    target="_blank"
+                    class="text-primary"
+                    >Opensociety</a
+                >
+            </p>
         </footer>
     </body>
 </html>
